@@ -1,4 +1,5 @@
 import type { ImgHTMLAttributes } from 'react'
+import { asset } from '../lib/asset'
 
 type Props = Omit<ImgHTMLAttributes<HTMLImageElement>, 'src'> & {
   /** Base path without extension, e.g. '/images/hero'. Expects `<base>.webp` and `<base>-sm.webp`. */
@@ -16,7 +17,8 @@ type Props = Omit<ImgHTMLAttributes<HTMLImageElement>, 'src'> & {
  * To use a real photograph, export `<name>.webp` (large) and
  * `<name>-sm.webp` (about half the width) into /public/images.
  */
-export function Img({ base, sizes = '100vw', priority, alt = '', width = 1800, height = 1200, ...rest }: Props) {
+export function Img({ base: rawBase, sizes = '100vw', priority, alt = '', width = 1800, height = 1200, ...rest }: Props) {
+  const base = asset(rawBase)
   return (
     <img
       src={`${base}.webp`}

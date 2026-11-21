@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { Logo } from './Logo'
+import { asset } from '../lib/asset'
 
 /** Elegant intro: counter + architectural line drawing, then curtain lift. */
 export function Loader({ onDone }: { onDone: () => void }) {
@@ -10,7 +11,7 @@ export function Loader({ onDone }: { onDone: () => void }) {
   useEffect(() => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const hero = new Image()
-    hero.src = window.innerWidth < 900 ? '/images/hero-sm.webp' : '/images/hero.webp'
+    hero.src = asset(window.innerWidth < 900 ? '/images/hero-sm.webp' : '/images/hero.webp')
     let loaded = false
     const markLoaded = () => (loaded = true)
     hero.onload = hero.onerror = markLoaded

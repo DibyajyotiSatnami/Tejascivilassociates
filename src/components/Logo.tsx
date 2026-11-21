@@ -1,4 +1,5 @@
 import { site } from '../config/site'
+import { asset } from '../lib/asset'
 
 /**
  * LOGO PLACEHOLDER
@@ -10,7 +11,7 @@ import { site } from '../config/site'
  */
 export function Logo({ tone = 'light', className = '' }: { tone?: 'light' | 'dark'; className?: string }) {
   const src = tone === 'light' ? site.logo.srcLight ?? site.logo.src : site.logo.src
-  if (src) return <img src={src} alt={site.logo.alt} className={`h-10 w-auto ${className}`} />
+  if (src) return <img src={asset(src)} alt={site.logo.alt} className={`h-10 w-auto ${className}`} />
 
   const fg = tone === 'light' ? 'text-white' : 'text-ink'
   const border = tone === 'light' ? 'border-white/35' : 'border-ink/30'

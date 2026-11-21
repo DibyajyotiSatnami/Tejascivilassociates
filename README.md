@@ -68,3 +68,12 @@ Re-render the demo visuals: `node scripts/render-images.mjs` (requires Playwrigh
 - Self-hosted fonts (Playfair Display, Manrope), semantic landmarks, skip link, keyboard-accessible menus/dialogs, visible focus styles.
 - `prefers-reduced-motion` disables smooth scrolling, parallax and pinned animations.
 - SEO: title/description, Open Graph & Twitter cards, `GeneralContractor` JSON-LD with address, geo and opening hours, robots.txt, sitemap.
+
+## Deployment (GitHub Pages)
+
+`.github/workflows/deploy.yml` builds and deploys the site to GitHub Pages on every push to `main`
+(and the current feature branch), or manually from the **Actions** tab. The site is served at
+`https://<owner>.github.io/<repo>/`; asset paths adapt automatically via Vite's `base`.
+To send enquiries by email from the live site, add a repository secret `VITE_WEB3FORMS_ACCESS_KEY`
+(Settings → Secrets and variables → Actions) and re-run the workflow.
+For a custom domain, set it under Settings → Pages and build with `--base=/`.

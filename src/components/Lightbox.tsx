@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useCallback, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 import { lockScroll } from '../lib/scroll'
+import { asset } from '../lib/asset'
 
 export type LightboxItem = { src: string; alt: string; title?: string; meta?: string; note?: string }
 
@@ -49,7 +50,7 @@ export function Lightbox({ items, index, onChange, onClose }: { items: LightboxI
             <AnimatePresence mode="popLayout" initial={false}>
               <motion.img
                 key={item.src}
-                src={`${item.src}.webp`}
+                src={asset(`${item.src}.webp`)}
                 alt={item.alt}
                 className="max-h-full max-w-full object-contain shadow-2xl"
                 initial={{ opacity: 0, scale: 0.96, x: 40 }}
