@@ -77,3 +77,8 @@ Re-render the demo visuals: `node scripts/render-images.mjs` (requires Playwrigh
 To send enquiries by email from the live site, add a repository secret `VITE_WEB3FORMS_ACCESS_KEY`
 (Settings → Secrets and variables → Actions) and re-run the workflow.
 For a custom domain, set it under Settings → Pages and build with `--base=/`.
+
+### AI-generated images
+`hero`, `about`, five `service-*` images and `project-residential` were generated with FLUX.1 Krea (Hugging Face).
+They are illustrative only. Note: re-running `scripts/render-images.mjs` would overwrite them with the procedural
+renders. Pass specific names to re-render only those (e.g. `node scripts/render-images.mjs cta`).

@@ -129,7 +129,7 @@ export function Footer() {
           <p>
             © {year} {site.name}. All rights reserved.
           </p>
-          <p className="text-center">Visuals shown are illustrative computer-generated renders.</p>
+          <p className="text-center">Visuals shown are illustrative (AI-generated or computer-rendered).</p>
           <a href="#home" onClick={go('#home')} className="group inline-flex items-center gap-2 uppercase tracking-[0.2em] transition-colors hover:text-gold">
             Back to top
             <span className="grid h-8 w-8 place-items-center rounded-full border border-white/15 transition-all duration-500 group-hover:-translate-y-1 group-hover:border-gold">

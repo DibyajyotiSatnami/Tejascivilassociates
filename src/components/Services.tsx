@@ -52,8 +52,8 @@ export function Services() {
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Img
                       base={s.image}
-                      width={1200}
-                      height={900}
+                      width={1280}
+                      height={960}
                       sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
                       alt=""
                       className="h-full w-full object-cover transition-transform duration-[1.4s] ease-premium group-hover:scale-110"
@@ -75,7 +75,7 @@ export function Services() {
             </Reveal>
           ))}
         </div>
-        <p className="mt-10 text-xs text-white/35">Service list is indicative and subject to confirmation. Images are illustrative computer-generated visuals.</p>
+        <p className="mt-10 text-xs text-white/35">Service list is indicative and subject to confirmation. Images are illustrative AI-generated visuals.</p>
       </div>
 
       <AnimatePresence>
@@ -94,7 +94,7 @@ export function Services() {
               data-lenis-prevent
             >
               <div className="relative aspect-[4/3] md:aspect-auto">
-                <Img base={open.image} width={1200} height={900} sizes="(min-width: 768px) 450px, 100vw" alt="" className="h-full w-full object-cover" />
+                <Img base={open.image} width={1280} height={960} sizes="(min-width: 768px) 450px, 100vw" alt="" className="h-full w-full object-cover" />
                 <span className="sample-tag absolute bottom-4 left-4">Illustrative visual</span>
               </div>
               <div className="flex flex-col p-8 sm:p-10">

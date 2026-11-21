@@ -148,6 +148,8 @@ export const projects: {
   location: string
   category: ProjectCategory
   image: string
+  /** intrinsic [width, height] of the large image (default 1800×1200) */
+  size?: [number, number]
   description: string
 }[] = [
   {
@@ -157,6 +159,7 @@ export const projects: {
     location: 'Location to be confirmed',
     category: 'Residential',
     image: '/images/project-residential',
+    size: [1024, 576],
     description: 'Sample visual of a contemporary residence. Actual project photographs and details will replace this placeholder.',
   },
   {
@@ -189,8 +192,8 @@ export const projects: {
 ]
 
 /** Gallery strip (sample visuals). */
-export const gallery = [
-  { src: '/images/hero', alt: 'Sample visual: contemporary residence at dusk' },
+export const gallery: { src: string; alt: string; size?: [number, number] }[] = [
+  { src: '/images/hero', size: [1920, 1088], alt: 'Sample visual: contemporary residence at dusk' },
   { src: '/images/gallery-interior', alt: 'Sample visual: open-plan living space with garden views' },
   { src: '/images/project-modern', alt: 'Sample visual: modern pavilion beside a reflecting pool' },
   { src: '/images/service-design', alt: 'Sample visual: white architectural massing model' },

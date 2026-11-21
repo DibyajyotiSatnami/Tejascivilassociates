@@ -76,10 +76,10 @@ export function About() {
           <div ref={imgWrap} className="relative aspect-[4/5] overflow-hidden bg-ink-2">
             <Img
               base="/images/about"
-              width={1200}
-              height={1500}
+              width={1024}
+              height={1280}
               sizes="(min-width: 1024px) 45vw, 100vw"
-              alt="Computer-generated visual: façade detail of a contemporary building with timber screen and glazing"
+              alt="Illustrative AI-generated visual: façade detail of a contemporary building with timber screen and glazing"
               className="h-full w-full object-cover"
             />
             <span className="sample-tag absolute left-4 top-4">Illustrative visual</span>

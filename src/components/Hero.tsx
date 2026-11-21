@@ -98,9 +98,9 @@ export function Hero({ ready }: { ready: boolean }) {
           <Img
             base="/images/hero"
             priority
-            width={2400}
-            height={1350}
-            alt="Computer-generated visual of a contemporary residence with glass, stone and timber at dusk"
+            width={1920}
+            height={1088}
+            alt="Illustrative AI-generated visual of a contemporary residence with glass, stone and timber at dusk"
             className="h-full w-full object-cover object-[65%_center]"
           />
         </motion.div>
@@ -208,7 +208,7 @@ export function Hero({ ready }: { ready: boolean }) {
             </span>
           </a>
 
-          <span className="hidden text-[10px] uppercase tracking-[0.2em] text-white/45 sm:block">Illustrative CGI visual</span>
+          <span className="hidden text-[10px] uppercase tracking-[0.2em] text-white/45 sm:block">Illustrative visual</span>
           <ArrowDown className="h-4 w-4 text-white/50 md:hidden" aria-hidden />
         </div>
       </motion.div>
