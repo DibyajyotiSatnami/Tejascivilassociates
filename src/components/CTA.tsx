@@ -6,6 +6,7 @@ import { startEnquiry } from '../lib/enquiry'
 import { gsap } from '../lib/scroll'
 import { Img } from './Img'
 import { Reveal, SplitLines } from './Reveal'
+import { SunRays } from './SunRays'
 
 export function CTA() {
   const wrap = useRef<HTMLDivElement>(null)
@@ -28,6 +29,7 @@ export function CTA() {
       <div className="absolute inset-0 bg-ink/70" />
       <div className="absolute inset-0 bg-gradient-to-b from-ink via-transparent to-ink" />
       <div className="grain absolute inset-0" />
+      <SunRays className="absolute bottom-0 left-1/2 w-[1000px] max-w-none -translate-x-1/2" opacity={0.4} />
 
       <div className="container-site relative text-center">
         <Reveal>

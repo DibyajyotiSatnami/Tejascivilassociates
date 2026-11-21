@@ -95,7 +95,7 @@ export function About() {
         {/* copy */}
         <div className="lg:col-span-6 lg:pl-6">
           <Reveal>
-            <p className="eyebrow text-gold-dark">About Us</p>
+            <p className="eyebrow text-navy">About Us</p>
           </Reveal>
           <SplitLines
             lines={['Building with purpose.', <em key="e" className="italic text-gold-dark">Creating with vision.</em>]}

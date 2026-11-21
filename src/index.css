@@ -5,7 +5,7 @@
 @layer base {
   :root {
     color-scheme: light;
-    --gold: #c5a46d;
+    --gold: #f2a71b;
   }
   html {
     -webkit-text-size-adjust: 100%;
@@ -28,7 +28,7 @@
   }
   ::selection {
     background: var(--gold);
-    color: #111315;
+    color: #071c3a;
   }
   :focus-visible {
     outline: 2px solid var(--gold);
@@ -96,10 +96,10 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
   .blueprint-grid {
-    background-image: linear-gradient(rgba(197, 164, 109, 0.12) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(197, 164, 109, 0.12) 1px, transparent 1px),
-      linear-gradient(rgba(197, 164, 109, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(197, 164, 109, 0.05) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(242, 167, 27, 0.10) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(242, 167, 27, 0.10) 1px, transparent 1px),
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
     background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
   }
 }

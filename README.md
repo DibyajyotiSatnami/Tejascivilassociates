@@ -23,7 +23,7 @@ Almost everything lives in **`src/config/site.ts`**:
 
 | What | Where |
 | --- | --- |
-| Logo | `site.logo.src` / `site.logo.srcLight` → put the file in `/public` (e.g. `/logo.svg`). Until set, a clearly marked placeholder is shown. Also replace `public/favicon.svg`. |
+| Logo | `site.logo.src` (currently `/logo-256.webp`, made from the supplied logo; full size in `public/logo.png`). Favicons and app icons live in `public/` (`favicon.png`, `icon-192.png`, `icon-512.png`, `apple-touch-icon.png`). |
 | Phone, WhatsApp, email | `site.phone`, `site.whatsapp` (digits only, e.g. `9198xxxxxxxx`), `site.email` — `null` = shown as “to be added”. Setting `whatsapp` enables WhatsApp buttons. |
 | Social links | `site.social.*` |
 | Services | `services[]` — **proposed categories, not verified**. Edit copy or set `enabled: false`. |

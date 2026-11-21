@@ -26,7 +26,7 @@ export const site = {
    * backgrounds. While `src` is null a neutral placeholder is shown.
    */
   logo: {
-    src: null as string | null,
+    src: '/logo-256.webp' as string | null,
     srcLight: null as string | null,
     alt: 'TEJAS CIVIL ASSOCIATES logo',
   },

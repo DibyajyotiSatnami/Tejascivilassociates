@@ -43,7 +43,7 @@ export function Projects() {
         <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <Reveal>
-              <p className="eyebrow text-gold-dark">Featured Projects</p>
+              <p className="eyebrow text-navy">Featured Projects</p>
             </Reveal>
             <SplitLines id="projects-title" className="heading-lg mt-6 text-ink" lines={['Spaces shaped', <em key="e" className="italic text-gold-dark">with intent.</em>]} />
           </div>

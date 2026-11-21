@@ -32,7 +32,7 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="relative overflow-hidden bg-[#0b0c0d] pt-20 text-white/70 sm:pt-28">
+    <footer className="relative overflow-hidden bg-[#051530] pt-20 text-white/70 sm:pt-28">
       {/* animated gold line */}
       <motion.div
         className="absolute inset-x-0 top-0 h-px origin-left bg-gradient-to-r from-transparent via-gold to-transparent"

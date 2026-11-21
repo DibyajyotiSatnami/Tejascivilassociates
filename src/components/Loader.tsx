@@ -61,19 +61,33 @@ export function Loader({ onDone }: { onDone: () => void }) {
           aria-label="Loading website"
         >
           <div className="blueprint-grid absolute inset-0 opacity-40" aria-hidden />
-          <svg viewBox="0 0 200 120" className="relative mb-10 w-48 text-gold" fill="none" stroke="currentColor" strokeWidth="0.8" aria-hidden>
-            {[
-              'M10 110 H190',
-              'M30 110 V50 H110 V110',
-              'M110 110 V28 H170 V110',
-              'M30 50 L70 30 L110 50',
-              'M122 40 H158 M122 55 H158 M122 70 H158 M122 85 H158',
-              'M45 70 H95 M45 88 H95',
-            ].map((d, i) => (
-              <motion.path key={i} d={d} initial={{ pathLength: 0, opacity: 0 }} animate={{ pathLength: 1, opacity: 1 }} transition={{ duration: 1.4, delay: i * 0.12, ease: 'easeInOut' }} />
-            ))}
-          </svg>
-          <Logo tone="light" />
+          {/* sunrise: rays fan out behind the logo badge, echoing the logo's sun */}
+          <div className="relative grid h-44 w-44 place-items-center">
+            <svg viewBox="-100 -100 200 200" className="absolute inset-0 h-full w-full text-gold" aria-hidden>
+              {Array.from({ length: 12 }).map((_, i) => (
+                <motion.line
+                  key={i}
+                  x1="0"
+                  y1="-62"
+                  x2="0"
+                  y2="-92"
+                  stroke="currentColor"
+                  strokeWidth="2.2"
+                  strokeLinecap="round"
+                  transform={`rotate(${i * 30})`}
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  animate={{ pathLength: 1, opacity: [0, 1, 0.55] }}
+                  transition={{ duration: 1.2, delay: 0.2 + i * 0.06, ease: 'easeOut' }}
+                />
+              ))}
+              <motion.circle r="58" fill="none" stroke="currentColor" strokeOpacity="0.35" strokeWidth="0.8" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.6, ease: 'easeInOut' }} />
+            </svg>
+            <motion.div initial={{ scale: 0.6, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}>
+              <Logo tone="light" size={104} wordmark={false} />
+            </motion.div>
+          </div>
+          <p className="mt-8 font-serif text-xl font-bold tracking-[0.2em]">TEJAS</p>
+          <p className="mt-1 text-[10px] font-semibold tracking-[0.35em] text-white/60">CIVIL ASSOCIATES</p>
           <div className="relative mt-10 h-px w-56 overflow-hidden bg-white/10">
             <div className="absolute inset-y-0 left-0 bg-gold transition-[width] duration-100" style={{ width: `${progress}%` }} />
           </div>

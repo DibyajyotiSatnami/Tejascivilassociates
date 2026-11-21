@@ -81,7 +81,7 @@ export function Architecture() {
   return (
     <section ref={section} className="relative h-[100svh] min-h-[600px] overflow-hidden bg-ink text-white" aria-labelledby="arch-title" onPointerMove={onPointer}>
       <div className="blueprint-grid absolute inset-0 opacity-50" aria-hidden />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_55%,rgba(197,164,109,0.10),transparent_60%)]" aria-hidden />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_55%,rgba(242,167,27,0.10),transparent_60%)]" aria-hidden />
 
       {/* 3D canvas */}
       <div className="absolute inset-x-0 top-[31%] h-[33%] [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_85%,transparent)] md:inset-y-0 md:[mask-image:none] md:left-[30%] md:right-0 md:top-0 md:h-auto">

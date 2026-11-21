@@ -44,7 +44,7 @@ export function Cursor() {
       aria-hidden
       className="pointer-events-none fixed left-0 top-0 z-[90] rounded-full border border-gold mix-blend-difference"
       style={{ x: sx, y: sy, translateX: '-50%', translateY: '-50%' }}
-      animate={{ width: hover ? 56 : 28, height: hover ? 56 : 28, opacity: 0.9, scale: down ? 0.8 : 1, backgroundColor: hover ? 'rgba(197,164,109,0.15)' : 'rgba(197,164,109,0)' }}
+      animate={{ width: hover ? 56 : 28, height: hover ? 56 : 28, opacity: 0.9, scale: down ? 0.8 : 1, backgroundColor: hover ? 'rgba(242,167,27,0.15)' : 'rgba(242,167,27,0)' }}
       transition={{ type: 'spring', stiffness: 300, damping: 25 }}
     />
   )

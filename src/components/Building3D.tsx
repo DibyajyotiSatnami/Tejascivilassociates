@@ -37,7 +37,7 @@ import {
 
 type Part = { size: [number, number, number]; pos: [number, number, number]; kind: 'slab' | 'column' | 'core' | 'glass' | 'accent' | 'wall' }
 
-const GOLD = new Color('#C5A46D')
+const GOLD = new Color('#F2A71B')
 
 function buildParts(): Part[] {
   const parts: Part[] = []
@@ -77,8 +77,8 @@ const MATS: Record<Part['kind'], MeshStandardMaterialParameters> = {
   slab: { color: '#e9e5dc', roughness: 0.85 },
   column: { color: '#cfcac0', roughness: 0.8 },
   core: { color: '#bdb7ac', roughness: 0.9 },
-  glass: { color: '#1f2a31', roughness: 0.08, metalness: 0.6, emissive: '#c58a45', emissiveIntensity: 0.18 },
-  accent: { color: '#C5A46D', roughness: 0.35, metalness: 0.9 },
+  glass: { color: '#163a6b', roughness: 0.08, metalness: 0.6, emissive: '#f2a71b', emissiveIntensity: 0.12 },
+  accent: { color: '#F2A71B', roughness: 0.4, metalness: 0.6 },
   wall: { color: '#8f7f6a', roughness: 0.95 },
 }
 
@@ -111,7 +111,7 @@ export default function Building3D({ progress, pointer, active }: Props) {
     renderer.domElement.style.display = 'block'
 
     const scene = new Scene()
-    scene.fog = new Fog('#111315', 12, 26)
+    scene.fog = new Fog('#071C3A', 12, 26)
     const camera = new PerspectiveCamera(36, 1, 0.1, 100)
     camera.position.set(6.2, 3.4, 11.5)
 
@@ -154,11 +154,11 @@ export default function Building3D({ progress, pointer, active }: Props) {
     scan.rotation.x = -Math.PI / 2
     group.add(scan)
     // blueprint ground
-    const grid = new GridHelper(14, 28, '#8a7448', '#3a3328')
+    const grid = new GridHelper(14, 28, '#9a7420', '#1c3560')
     grid.position.y = 0.001
     group.add(grid)
     const floorGeo = new CircleGeometry(7, 64)
-    const floorMat = new MeshStandardMaterial({ color: '#16181b', roughness: 1 })
+    const floorMat = new MeshStandardMaterial({ color: '#0a2246', roughness: 1 })
     const floor = new Mesh(floorGeo, floorMat)
     floor.rotation.x = -Math.PI / 2
     floor.position.y = -0.01

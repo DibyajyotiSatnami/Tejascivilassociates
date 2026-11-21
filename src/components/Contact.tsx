@@ -268,7 +268,7 @@ export function Contact() {
                 </Field>
                 <Field id={`${uid}-projectType`} label="Project Type" required error={errors.projectType}>
                   <select id={`${uid}-projectType`} name="projectType" className="field appearance-none bg-[length:12px] bg-[right_center] bg-no-repeat pr-6 [&>option]:bg-ink-2" value={v.projectType} onChange={set('projectType')} {...err('projectType')}
-                    style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23C5A46D' stroke-width='1.4'/%3E%3C/svg%3E\")" }}>
+                    style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23F2A71B' stroke-width='1.4'/%3E%3C/svg%3E\")" }}>
                     <option value="" disabled>
                       Select a project type
                     </option>

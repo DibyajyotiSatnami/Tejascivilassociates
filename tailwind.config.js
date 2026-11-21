@@ -4,11 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: { DEFAULT: '#111315', 2: '#202326', 3: '#2c3034' },
-        bone: { DEFAULT: '#F4F2ED', 2: '#E9E5DC' },
-        gold: { DEFAULT: '#C5A46D', light: '#D9BF8F', dark: '#A8864F' },
-        stone: { DEFAULT: '#8A8780' },
-        text: { DEFAULT: '#292929' },
+        ink: { DEFAULT: '#071C3A', 2: '#0C2850', 3: '#12356A' },
+        navy: { DEFAULT: '#012A55', light: '#1D4C8C' },
+        bone: { DEFAULT: '#F6F8FB', 2: '#E9EEF5' },
+        // sun amber from the logo
+        gold: { DEFAULT: '#F2A71B', light: '#F7C35B', dark: '#B87A06' },
+        stone: { DEFAULT: '#5B6472' },
+        text: { DEFAULT: '#1F2937' },
       },
       fontFamily: {
         serif: ['"Playfair Display"', 'Georgia', 'serif'],

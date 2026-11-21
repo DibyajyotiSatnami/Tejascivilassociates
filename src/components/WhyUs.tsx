@@ -23,7 +23,7 @@ export function WhyUs() {
       <div className="container-site relative grid gap-16 lg:grid-cols-12">
         <div className="lg:sticky lg:top-32 lg:col-span-5 lg:self-start">
           <Reveal>
-            <p className="eyebrow text-gold-dark">Why Choose Us</p>
+            <p className="eyebrow text-navy">Why Choose Us</p>
           </Reveal>
           <SplitLines id="why-title" className="heading-lg mt-6 text-ink" lines={['A foundation', <em key="e" className="italic text-gold-dark">built on trust.</em>]} />
           <Reveal delay={0.1}>
