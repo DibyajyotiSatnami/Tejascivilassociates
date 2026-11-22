@@ -94,10 +94,11 @@ export function Projects() {
                   <div className={`relative overflow-hidden ${shown.length > 2 && i % 3 === 0 ? 'aspect-[4/3] md:aspect-[21/9]' : 'aspect-[4/3]'}`}>
                     <Img
                       base={p.image}
-                      width={p.size?.[0] ?? 1800}
-                      height={p.size?.[1] ?? 1200}
+                      width={p.size?.[0] ?? 1536}
+                      height={p.size?.[1] ?? 1024}
                       sizes={shown.length > 2 && i % 3 === 0 ? '100vw' : '(min-width: 768px) 50vw, 100vw'}
                       alt={p.description}
+                      style={p.focus ? { objectPosition: p.focus } : undefined}
                       className="h-full w-full object-cover transition-transform duration-[1.6s] ease-premium group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent transition-opacity duration-700 group-hover:opacity-90" />
@@ -158,7 +159,7 @@ export function Projects() {
               transition={{ duration: 1, ease, delay: Math.min(i, 3) * 0.08 }}
               aria-label={`Open image: ${g.alt}`}
             >
-              <Img base={g.src} width={g.size?.[0] ?? 1800} height={g.size?.[1] ?? 1200} sizes="(min-width: 1024px) 34vw, 78vw" alt={g.alt} className="h-full w-full object-cover transition-all duration-[1.4s] ease-premium group-hover:scale-110" />
+              <Img base={g.src} width={g.size?.[0] ?? 1536} height={g.size?.[1] ?? 1024} sizes="(min-width: 1024px) 34vw, 78vw" alt={g.alt} className="h-full w-full object-cover transition-all duration-[1.4s] ease-premium group-hover:scale-110" />
               <span className="absolute inset-0 bg-ink/0 transition-colors duration-500 group-hover:bg-ink/30" />
             </motion.button>
           ))}

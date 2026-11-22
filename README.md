@@ -79,6 +79,7 @@ To send enquiries by email from the live site, add a repository secret `VITE_WEB
 For a custom domain, set it under Settings → Pages and build with `--base=/`.
 
 ### AI-generated images
-`hero`, `about`, five `service-*` images and `project-residential` were generated with FLUX.1 Krea (Hugging Face).
+All images except `cta` (still a procedural render) were generated with FLUX.1 Krea (Hugging Face) using `scripts/ai/`.
+Small fixes: stray AI-generated text was cropped off `project-modern` and fake signage patched out of `project-commercial`.
 They are illustrative only. Note: re-running `scripts/render-images.mjs` would overwrite them with the procedural
 renders. Pass specific names to re-render only those (e.g. `node scripts/render-images.mjs cta`).

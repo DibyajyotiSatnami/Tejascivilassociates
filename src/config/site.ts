@@ -148,8 +148,10 @@ export const projects: {
   location: string
   category: ProjectCategory
   image: string
-  /** intrinsic [width, height] of the large image (default 1800×1200) */
+  /** intrinsic [width, height] of the large image (default 1536×1024) */
   size?: [number, number]
+  /** CSS object-position for cropping, e.g. 'center 70%' */
+  focus?: string
   description: string
 }[] = [
   {
@@ -159,7 +161,6 @@ export const projects: {
     location: 'Location to be confirmed',
     category: 'Residential',
     image: '/images/project-residential',
-    size: [1024, 576],
     description: 'Sample visual of a contemporary residence. Actual project photographs and details will replace this placeholder.',
   },
   {
@@ -178,6 +179,7 @@ export const projects: {
     location: 'Location to be confirmed',
     category: 'Modern Architecture',
     image: '/images/project-modern',
+    size: [1536, 792],
     description: 'Sample visual of a modern pavilion-style building. Actual project photographs and details will replace this placeholder.',
   },
   {
@@ -187,6 +189,7 @@ export const projects: {
     location: 'Location to be confirmed',
     category: 'Construction Projects',
     image: '/images/project-construction',
+    focus: 'center 72%',
     description: 'Sample visual of a structure under construction. Actual project photographs and details will replace this placeholder.',
   },
 ]
@@ -195,11 +198,11 @@ export const projects: {
 export const gallery: { src: string; alt: string; size?: [number, number] }[] = [
   { src: '/images/hero', size: [1920, 1088], alt: 'Sample visual: contemporary residence at dusk' },
   { src: '/images/gallery-interior', alt: 'Sample visual: open-plan living space with garden views' },
-  { src: '/images/project-modern', alt: 'Sample visual: modern pavilion beside a reflecting pool' },
-  { src: '/images/service-design', alt: 'Sample visual: white architectural massing model' },
+  { src: '/images/project-modern', size: [1536, 792], alt: 'Sample visual: modern pavilion beside a reflecting pool' },
+  { src: '/images/service-design', size: [1280, 960], alt: 'Sample visual: white architectural massing model' },
   { src: '/images/project-commercial', alt: 'Sample visual: commercial building in golden light' },
   { src: '/images/project-construction', alt: 'Sample visual: concrete frame under construction' },
-  { src: '/images/cta', alt: 'Sample visual: commercial building at blue hour' },
+  { src: '/images/cta', size: [2400, 1350], alt: 'Sample visual: commercial building at blue hour' },
 ]
 
 /* ------------------------------------------------------------------------ */
